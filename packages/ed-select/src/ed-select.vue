@@ -23,6 +23,10 @@
 </template>
 
 <script>
+import {Select,Option,Checkbox,OptionGroup} from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+import Vue from 'vue'
+Vue.use(Select).use(Option).use(OptionGroup).use(Checkbox);
 export default {
   name: "ed-select",
   props: {

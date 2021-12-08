@@ -1,9 +1,8 @@
 <template>
   <div class="ed-message">
     <div class="ed-message-text">{{ message }}</div>
-    <div class="ed-message-img" v-if="showImg">
+    <div class="ed-message-img" v-if="showImg && url&&url.length > 0">
       <img v-if="url&&url.length > 0" :src="url" />
-      <img v-else src="./st.png" />
     </div>
   </div>
 </template>

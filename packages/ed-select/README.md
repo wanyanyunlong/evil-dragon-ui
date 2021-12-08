@@ -15,8 +15,6 @@ size	                输入框尺寸	                                           
 clearable	            是否可以清空选项	                                                boolean	—	false
 collapse-tags	        多选时是否将选中值按文字的形式展示	                                    boolean	—	false
 multiple-limit	        多选时用户最多可以选择的项目数，为 0 则不限制	                          number	—	0
-name	                select input 的 name 属性	                                        string	—	—
-autocomplete	        select input 的 autocomplete 属性	                                string	—	off
 placeholder	            占位符	                                                            string	—	请选择
 filterable	            是否可搜索	                                                        boolean	—	false
 popper-class	        Select 下拉框的类名	                                                 string	—	—

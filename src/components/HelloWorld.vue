@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <el-input></el-input>
     <h1>{{ msg }}</h1>
     <ed-message message="欢迎光临"></ed-message>
   </div>

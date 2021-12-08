@@ -2,70 +2,49 @@
   <div id="app">
 
     <br /> <br />
-    多选： <ed-select v-model="value1" :dataList="list0" :props="{label: 'name',value: 'id'}" multiple  collapse-tags filterable clearable reserve-keyword placeholder="媒体账号" ></ed-select>{{value1}}
+    多选： <ed-select v-model="value1" :dataList="list0" :props="{label: 'name',value: 'id'}" multiple collapse-tags filterable clearable reserve-keyword placeholder="媒体账号"></ed-select>{{value1}}
     <br /> <br />
-    单选： <ed-select v-model="value2" :dataList="list"  filterable clearable placeholder="媒体账号" ></ed-select>{{value2}}
+    单选： <ed-select v-model="value2" :dataList="list" filterable clearable placeholder="媒体账号"></ed-select>{{value2}}
     <br /> <br />
-    多选组： <ed-select v-model="value4" :dataList="list1" multiple  collapse-tags filterable clearable reserve-keyword placeholder="媒体账号" ></ed-select>{{value4}}
+    多选组： <ed-select v-model="value4" :dataList="list1" multiple collapse-tags filterable clearable reserve-keyword placeholder="媒体账号"></ed-select>{{value4}}
     <br /> <br />
-    单选组： <ed-select v-model="value5" :dataList="list1" filterable clearable placeholder="媒体账号" ></ed-select>{{value5}}
+    单选组： <ed-select v-model="value5" :dataList="list1" filterable clearable placeholder="媒体账号"></ed-select>{{value5}}
     <br /> <br />
     原始：<el-select v-model="value3" @change="v3Change">
       <el-option v-for="(item,index) in list0" :key="index" :label="item.name" :value="item.id" :disabled="item.disabled"></el-option>
     </el-select>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
 
-
-    <el-table
-      :data="tableData"
-      style="width: 100%">
-      <el-table-column
-        prop="date"
-        label="日期"
-        width="1080">
-      </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="1280">
-      </el-table-column>
-      <el-table-column
-        prop="address"
-        label="地址"
-        width="500">
-      </el-table-column>
-    </el-table>
+    <ed-input v-model="vstr" @input="change" clearable></ed-input>
+    <ed-message message="欢迎光临" url="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"></ed-message>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
   components: {
-    HelloWorld
   },
 
   data() {
     return {
+      vstr: "",
       tableData: [{
-            date: '2016-05-02',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1518 弄'
-          }, {
-            date: '2016-05-04',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1517 弄'
-          }, {
-            date: '2016-05-01',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1519 弄'
-          }, {
-            date: '2016-05-03',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1516 弄'
-          }],
+        date: '2016-05-02',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        date: '2016-05-04',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1517 弄'
+      }, {
+        date: '2016-05-01',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1519 弄'
+      }, {
+        date: '2016-05-03',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1516 弄'
+      }],
       list0: [{
         id: '选项1',
         name: '黄金糕',
@@ -162,6 +141,9 @@ export default {
       console.log(e)
       console.log(v)
     },
+    change(e) {
+      console.log(e)
+    },
   },
 }
 </script>
@@ -178,13 +160,13 @@ export default {
 </style>
 <style scoped  lang="scss" >
 // 滚动条的宽度
-  // /deep/ .el-table__body-wrapper::-webkit-scrollbar {
-  //   width: 6px; // 横向滚动条
-  //   height:10px; // 纵向滚动条 必写
-  // }
-  // // 滚动条的滑块
-  // /deep/ .el-table__body-wrapper::-webkit-scrollbar-thumb {
-  //   background-color: #ddd;
-  //   border-radius: 5px;
-  // }
+// /deep/ .el-table__body-wrapper::-webkit-scrollbar {
+//   width: 6px; // 横向滚动条
+//   height:10px; // 纵向滚动条 必写
+// }
+// // 滚动条的滑块
+// /deep/ .el-table__body-wrapper::-webkit-scrollbar-thumb {
+//   background-color: #ddd;
+//   border-radius: 5px;
+// }
 </style>
