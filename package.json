@@ -1,0 +1,53 @@
+{
+  "name": "evil-dragon-ui",
+  "version": "0.1.0",
+  "private": false,
+  "description":"基于 ElementUI 二次开发的 UI组件库",
+  "main":"lib/evil-dragon-ui.umd.min.js",
+  "keywords": ["evil-dragon-ui"],
+  "license": "MIT",
+  "author":{"name": "完颜云龙","email": "736045109@qq.com"},
+  "contributors":["李捷","朱治青","李丽娜","英雄互娱大数据前端组"],
+  "scripts": {
+    "lib": "vue-cli-service build --target lib --name evil-dragon-ui --dest lib packages/index.js",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.19.1",
+    "element-ui": "^2.15.6",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-plugin-eslint": "^4.5.15",
+    "@vue/cli-service": "^4.5.15",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
