@@ -1,6 +1,6 @@
 // 导入组件
 import message from './message'
-import edSelect from './edSelect'
+import edSelect from './ed-select'
 // 存储组件列表
 const components = [
     message,
